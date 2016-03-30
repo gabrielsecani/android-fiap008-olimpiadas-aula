@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
@@ -9,7 +10,7 @@
         android:text="Nome"
         android:id="@+id/textView" />
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/edtNomeD"
@@ -21,7 +22,7 @@
         android:text="Idade"
         android:id="@+id/textView2" />
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/edtIdadeD"
@@ -33,7 +34,7 @@
         android:text="New Text"
         android:id="@+id/textView3" />
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/edtModalidadeD" />
@@ -44,4 +45,12 @@
         android:text="Confirmar"
         android:id="@+id/btnConfirmar"
         android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancelar"
+        android:id="@+id/btnCancelar"
+        android:layout_gravity="center_horizontal" />
+
 </LinearLayout>

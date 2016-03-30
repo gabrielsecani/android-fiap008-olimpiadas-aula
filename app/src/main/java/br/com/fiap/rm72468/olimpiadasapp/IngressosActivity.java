@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
-public class IngressosActivity extends AppCompatActivity  {
+public class IngressosActivity extends AppCompatActivity {
 
     private EditText edtNome;
     private EditText edtIdade;
@@ -24,36 +24,44 @@ public class IngressosActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ingressos);
-        edtNome = (EditText)findViewById(R.id.edtNome);
-        edtIdade = (EditText)findViewById(R.id.edtIdade);
-        spnModalidade = (Spinner)findViewById(R.id.spnModalidade);
+        edtNome = (EditText) findViewById(R.id.edtNome);
+        edtIdade = (EditText) findViewById(R.id.edtIdade);
+        spnModalidade = (Spinner) findViewById(R.id.spnModalidade);
 
-        btnReserva = (Button)findViewById(R.id.btnReservar);
+        btnReserva = (Button) findViewById(R.id.btnReservar);
 
     }
 
-    public void btnReservaClick(View v){
+    public void btnReservaClick(View v) {
         final Dialog d = new Dialog(this);
         d.setTitle("Confirmação");
         d.setContentView(R.layout.activity_ingressos_confirmacao);
 
-        TextView txtNome = (TextView)d.findViewById(R.id.edtNomeD);
+        TextView txtNome = (TextView) d.findViewById(R.id.edtNomeD);
         txtNome.setText(edtNome.getText());
-        TextView txtIdade = (TextView)d.findViewById(R.id.edtIdadeD);
+        TextView txtIdade = (TextView) d.findViewById(R.id.edtIdadeD);
         txtIdade.setText(edtIdade.getText());
-        TextView txtModalidade = (TextView)d.findViewById(R.id.edtModalidadeD);
+        TextView txtModalidade = (TextView) d.findViewById(R.id.edtModalidadeD);
         txtModalidade.setText(spnModalidade.getSelectedItem().toString());
 
-        ((Button)d.findViewById(R.id.btnConfirmar)).setOnClickListener(new View.OnClickListener() {
+        ((Button) d.findViewById(R.id.btnConfirmar)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 d.dismiss();
+                Toast.makeText(IngressosActivity.this, "Confirmou", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ((Button) d.findViewById(R.id.btnCancelar)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                d.dismiss();
+                Toast.makeText(IngressosActivity.this, "Cancelou", Toast.LENGTH_SHORT).show();
             }
         });
 
         d.show();
     }
-
 
 
 }
