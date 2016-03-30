@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Olimpiadas App</string>
+    <string name="choose_modalidade">Escolha uma modalidade</string>
+    <string-array name="array_modality">
+        <item>Atletismo</item>
+        <item>Basquetebol</item>
+        <item>Futebol</item>
+        <item>Ginástica Artistica</item>
+        <item>Ginástica Ritmica</item>
+        <item>Nado Sincronizado</item>
+        <item>Natação</item>
+        <item>Voleibol</item>
+        <item>Tênis</item>
+    </string-array>
+</resources>
